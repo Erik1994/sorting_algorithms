@@ -1,7 +1,7 @@
 import algorithm.Algorithm;
 import factory.AlgorithmFactory;
 import factory.BubbleSortFactory;
-import manager.ISortingManager;
+import manager.AbstractSortingManager;
 import manager.SortingManager;
 
 public class Main {
@@ -9,7 +9,7 @@ public class Main {
         Integer[] arrayToSort = {56, 21, 11, 2, 7, 14, 11, 1};
         AlgorithmFactory<Integer> algorithmFactory = new BubbleSortFactory<Integer>();
         Algorithm<Integer> algorithm = algorithmFactory.createAlgorithm();
-        ISortingManager<Integer> manager = new SortingManager<Integer>(algorithm);
+        AbstractSortingManager<Integer> manager = new SortingManager<Integer>(algorithm);
         manager.sort(arrayToSort);
 
         printArray(arrayToSort);
