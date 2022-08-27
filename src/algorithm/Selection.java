@@ -15,7 +15,7 @@ public class Selection<T extends Integer> extends Algorithm<T> {
         for (int lastUnsortedIndex = array.length - 1; lastUnsortedIndex > 0; --lastUnsortedIndex) {
             int maxIndex = 0;
             for (int i = 1; i <= lastUnsortedIndex; ++i) {
-                if (array[i].compareTo(array[lastUnsortedIndex]) > 0) {
+                if (array[i].compareTo(array[maxIndex]) > 0) {
                     maxIndex = i;
                 }
             }
