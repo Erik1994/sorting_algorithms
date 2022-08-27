@@ -6,6 +6,7 @@ public class Bubble<T extends Integer> extends Algorithm<T> {
     private final Swap<T> swap;
     public Bubble(Swap<T> swap) {
         this.swap = swap;
+        setAlgorithmName("Bubble sort");
     }
     @Override
     public void sort(T[] array) {
@@ -16,9 +17,5 @@ public class Bubble<T extends Integer> extends Algorithm<T> {
                 }
             }
         }
-    }
-
-    private void swap(T[] array, int i, int j) {
-
     }
 }

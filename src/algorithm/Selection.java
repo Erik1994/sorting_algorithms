@@ -7,6 +7,7 @@ public class Selection<T extends Integer> extends Algorithm<T> {
 
     public Selection(Swap<T> swap) {
         this.swap = swap;
+        setAlgorithmName("Selection sort");
     }
 
     @Override
@@ -14,7 +15,7 @@ public class Selection<T extends Integer> extends Algorithm<T> {
         for (int lastUnsortedIndex = array.length - 1; lastUnsortedIndex > 0; --lastUnsortedIndex) {
             T max = array[0];
             int maxIndex = 0;
-            for (int i = 1; i < lastUnsortedIndex; ++i) {
+            for (int i = 1; i <= lastUnsortedIndex; ++i) {
                 if (array[i].compareTo(max) > 0) {
                     max = array[i];
                     maxIndex = i;
